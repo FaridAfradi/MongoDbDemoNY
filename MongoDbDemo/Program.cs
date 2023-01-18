@@ -2,6 +2,7 @@
 using DataAccess.Models;
 
 var peopleManager = new PeopleManager();
+var humanManager = new HumanManager();
 
 ConsoleKey key = ConsoleKey.Enter;
 

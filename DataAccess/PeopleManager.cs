@@ -9,7 +9,8 @@ public class PeopleManager : IRepository<Person>
     private readonly IMongoCollection<Person> _collection;
     public PeopleManager()
     {
-        var settings = MongoClientSettings.FromConnectionString("mongodb+srv://niklas:Apa123@cluster0.j0lyf.mongodb.net/?retryWrites=true&w=majority");
+        //var settings = MongoClientSettings.FromConnectionString("mongodb+srv://niklas:Apa123@cluster0.j0lyf.mongodb.net/?retryWrites=true&w=majority");
+        var settings = $"mongodb://localhost:27017";
         var client = new MongoClient(settings);
         var database = client.GetDatabase("People");
 
